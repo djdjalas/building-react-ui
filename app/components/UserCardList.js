@@ -3,10 +3,6 @@ import UserCard from 'components/UserCard';
 
 export default class UserCardList extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   onRemoveUser(user) {
     this.props.handleRemoveUser(user);
   }

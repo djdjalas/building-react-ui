@@ -3,11 +3,6 @@ import ISO from 'api/ISO';
 
 export default class UserCard extends Component {
 
-    constructor(props) {
-      super(props);
-      this.onRemoveUser = ::this.onRemoveUser;
-    }
-
     onRemoveUser() {
       this.props.onRemoveUser(this.props.currentUser);
     }
@@ -27,7 +22,7 @@ export default class UserCard extends Component {
               </a>
             </p>
             <p className="card-text"><small className="text-muted"> { region }  <span className = {flagClassName}> </span> </small> </p>
-            <i className = 'fa fa-remove fa-2x float-right hvr-grow' onClick = { this.onRemoveUser }> </i>
+            <i className = 'fa fa-remove fa-2x float-right hvr-grow' onClick = { ::this.onRemoveUser }> </i>
           </div>
         </div>;
       return card;

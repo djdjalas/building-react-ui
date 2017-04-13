@@ -5,10 +5,6 @@ import CountryCodes from 'CountryCodes';
 
 export default class AddUserCard extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   onHandleAddUser(user) {
     this.props.handleAddUser(user);
   }

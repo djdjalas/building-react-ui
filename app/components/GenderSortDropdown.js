@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 
 export default class GenderSortDropdown extends Component {
 
-  constructor(props) {
-    super(props);
-    this.onFilter = ::this.onFilter;
-  }
-
   onFilter(e) {
     this.props.handleFilter(e.target.id);
   }
@@ -20,9 +15,9 @@ export default class GenderSortDropdown extends Component {
         </button>
 
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a className="dropdown-item" id="all" onClick = { this.onFilter } >All</a>
-          <a className="dropdown-item" id="female" onClick = { this.onFilter }>Female</a>
-          <a className="dropdown-item" id="male" onClick = { this.onFilter }>Male</a>
+          <a className="dropdown-item" id="all" onClick = { ::this.onFilter } >All</a>
+          <a className="dropdown-item" id="female" onClick = { ::this.onFilter }>Female</a>
+          <a className="dropdown-item" id="male" onClick = { ::this.onFilter }>Male</a>
         </div>
 
       </div>
