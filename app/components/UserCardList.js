@@ -8,9 +8,9 @@ export default class UserCardList extends Component {
   }
 
   render() {
-    const cards = this.props.theUsers.map((user, id) =>
+    const cards = this.props.theUsers.map((user, index) =>
       <UserCard
-        key = { id }
+        key = { index }
         user = { user }
         currentUser = { user }
         onRemoveUser = { ::this.onRemoveUser }

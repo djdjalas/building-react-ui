@@ -9,7 +9,7 @@ export default class AddUserCard extends Component {
     this.props.handleAddUser(user);
   }
 
-  onSubmit(e) {
+  onSubmitForm(e) {
     e.preventDefault();
 
     const gender = this.props.selectedGender.trim();
@@ -80,10 +80,10 @@ export default class AddUserCard extends Component {
 
       <div>
 
-        <i className = { plusOrMinusSign } onClick = { this.onToggleAddSection.bind(this) }></i> { addOrRemoveText }
+        <i className = { plusOrMinusSign } onClick = { ::this.onToggleAddSection }></i> { addOrRemoveText }
 
         <div style = { addSectionStyle } className="col-lg-12 addUserSection">
-          <form onSubmit = { ::this.onSubmit } >
+          <form onSubmit = { ::this.onSubmitForm } >
 
             <div className="form-group row">
               <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
@@ -122,7 +122,7 @@ export default class AddUserCard extends Component {
               <label htmlFor="region" className="col-sm-2 col-form-label">Region</label>
               <div className="col-sm-10">
               <Select
-                name="form-field-name"
+                name="form-field-country"
                 value= { this.props.selectedCountry }
                 options={ this.getCountrySelectOptions() }
                 onChange={ ::this.onHandeChangeSelectedCountry }

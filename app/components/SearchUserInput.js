@@ -12,7 +12,7 @@ export default class SearchUserInput extends Component {
         type="email"
         onChange = { ::this.onSearch }
         className="form-control"
-        placeholder="Filter"
+        placeholder="Search"
       />
     );
   }

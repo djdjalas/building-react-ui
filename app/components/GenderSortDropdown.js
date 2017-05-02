@@ -11,7 +11,7 @@ export default class GenderSortDropdown extends Component {
       <div className="dropdown">
 
         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Show all { this.props.filterBy }
+          Show { this.props.filterBy }
         </button>
 
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
